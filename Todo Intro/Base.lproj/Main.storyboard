@@ -54,7 +54,13 @@
                             <outlet property="delegate" destination="4Ih-Dg-owh" id="xQu-oU-IyN"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="To Do" id="fND-gg-FvD"/>
+                    <navigationItem key="navigationItem" title="To Do" id="fND-gg-FvD">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="XHk-4z-zFp">
+                            <connections>
+                                <segue destination="HOM-3a-asO" kind="presentation" id="Ayc-YD-seC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uG2-TQ-8gh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -75,6 +81,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fuz-2d-Dne" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1206" y="136"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9kk-y6-DmT">
+            <objects>
+                <navigationController id="HOM-3a-asO" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="asc-xg-bYS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ips-xh-8HC" kind="relationship" relationship="rootViewController" id="OsK-fK-f8s"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lYa-gi-aye" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3122" y="136"/>
+        </scene>
+        <!--Add Todo-->
+        <scene sceneID="mrB-Ux-Py7">
+            <objects>
+                <viewController id="ips-xh-8HC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4hH-PL-ZjA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="XVL-9r-KHx"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Todo" id="Ka1-Qi-6ZD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A3l-YD-GhP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3836" y="136"/>
         </scene>
     </scenes>
 </document>
