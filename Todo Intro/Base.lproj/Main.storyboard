@@ -57,10 +57,13 @@
                     <navigationItem key="navigationItem" title="To Do" id="fND-gg-FvD">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="XHk-4z-zFp">
                             <connections>
-                                <segue destination="HOM-3a-asO" kind="presentation" id="Ayc-YD-seC"/>
+                                <action selector="onAddClicked:" destination="4Ih-Dg-owh" id="yO7-RF-MVQ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="HOM-3a-asO" kind="presentation" identifier="addTodoSegue" id="vQJ-35-hmq"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uG2-TQ-8gh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
