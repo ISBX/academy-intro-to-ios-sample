@@ -32,7 +32,6 @@ class TodoTableViewController: UITableViewController {
         return todoList.count
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "todoCell", for: indexPath)
 
@@ -44,6 +43,13 @@ class TodoTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        var todo = todoList[indexPath.row]
+        todo.completed = !todo.completed
+        todoList[indexPath.row] = todo
+        
+        tableView.reloadData()
+    }
 
     /*
     // Override to support conditional editing of the table view.
