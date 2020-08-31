@@ -17,6 +17,7 @@
 		61251DFC24F8ADA5009460AB /* Todo_IntroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61251DFB24F8ADA5009460AB /* Todo_IntroUITests.swift */; };
 		61251E0A24F8CE9F009460AB /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61251E0924F8CE9F009460AB /* Todo.swift */; };
 		61251E0C24F8CF14009460AB /* TodoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61251E0B24F8CF14009460AB /* TodoTableViewController.swift */; };
+		61251E5024FDBA3E009460AB /* AddTodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61251E4F24FDBA3E009460AB /* AddTodoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		61251DFD24F8ADA5009460AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61251E0924F8CE9F009460AB /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		61251E0B24F8CF14009460AB /* TodoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTableViewController.swift; sourceTree = "<group>"; };
+		61251E4F24FDBA3E009460AB /* AddTodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				61251DE724F8ADA5009460AB /* Info.plist */,
 				61251E0924F8CE9F009460AB /* Todo.swift */,
 				61251E0B24F8CF14009460AB /* TodoTableViewController.swift */,
+				61251E4F24FDBA3E009460AB /* AddTodoViewController.swift */,
 			);
 			path = "Todo Intro";
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				61251E0C24F8CF14009460AB /* TodoTableViewController.swift in Sources */,
 				61251DDA24F8ADA3009460AB /* AppDelegate.swift in Sources */,
 				61251DDC24F8ADA3009460AB /* SceneDelegate.swift in Sources */,
+				61251E5024FDBA3E009460AB /* AddTodoViewController.swift in Sources */,
 				61251E0A24F8CE9F009460AB /* Todo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

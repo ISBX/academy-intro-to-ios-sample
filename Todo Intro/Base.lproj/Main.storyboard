@@ -104,18 +104,47 @@
         <!--Add Todo-->
         <scene sceneID="mrB-Ux-Py7">
             <objects>
-                <viewController id="ips-xh-8HC" sceneMemberID="viewController">
+                <viewController id="ips-xh-8HC" customClass="AddTodoViewController" customModule="Todo_Intro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4hH-PL-ZjA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fzy-iX-ZcZ">
+                                <rect key="frame" x="20" y="80" width="374" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="6Ta-LN-o9W"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="XVL-9r-KHx" firstAttribute="trailing" secondItem="fzy-iX-ZcZ" secondAttribute="trailing" constant="20" id="NLa-kD-EL4"/>
+                            <constraint firstItem="fzy-iX-ZcZ" firstAttribute="top" secondItem="XVL-9r-KHx" secondAttribute="top" constant="24" id="hjg-2v-epi"/>
+                            <constraint firstItem="fzy-iX-ZcZ" firstAttribute="leading" secondItem="XVL-9r-KHx" secondAttribute="leading" constant="20" id="ian-An-RNp"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="XVL-9r-KHx"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Add Todo" id="Ka1-Qi-6ZD"/>
+                    <navigationItem key="navigationItem" title="Add Todo" id="Ka1-Qi-6ZD">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Kfq-va-ROQ">
+                            <connections>
+                                <action selector="onCancelClicked:" destination="ips-xh-8HC" id="Rdj-7p-BFn"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="AX6-hD-hOs">
+                            <connections>
+                                <action selector="onSaveClicked:" destination="ips-xh-8HC" id="e4y-Nh-7Nx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="descriptionTextField" destination="fzy-iX-ZcZ" id="hee-uk-NvV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A3l-YD-GhP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3836" y="136"/>
+            <point key="canvasLocation" x="3834.7826086956525" y="135.9375"/>
         </scene>
     </scenes>
 </document>
