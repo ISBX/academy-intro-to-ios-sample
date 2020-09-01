@@ -22,6 +22,13 @@ class TodoTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let navController = segue.destination as? UINavigationController,
+            let addVC = navController.children.first as? AddTodoViewController {
+            addVC.delegate = self
+        }
+    }
+    
     @IBAction func onAddClicked(_ sender: Any) {
         performSegue(withIdentifier: "addTodoSegue", sender: self)
     }
@@ -100,4 +107,11 @@ class TodoTableViewController: UITableViewController {
     }
     */
 
+}
+
+extension TodoTableViewController: AddTodoViewControllerDelegate {
+    func didSaveTodo(_ todo: Todo) {
+        todoList.append(todo)
+        tableView.reloadData()
+    }
 }

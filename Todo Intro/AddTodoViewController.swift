@@ -8,9 +8,15 @@
 
 import UIKit
 
+protocol AddTodoViewControllerDelegate {
+    func didSaveTodo(_ todo: Todo)
+}
+
 class AddTodoViewController: UIViewController {
 
     @IBOutlet weak var descriptionTextField: UITextField!
+    
+    var delegate: AddTodoViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +40,9 @@ class AddTodoViewController: UIViewController {
     }
     
     @IBAction func onSaveClicked(_ sender: Any) {
-        print(descriptionTextField.text)
+        if let description = descriptionTextField.text {
+            delegate?.didSaveTodo(Todo(description: description))
+        }
         dismiss(animated: true)
     }
 }
